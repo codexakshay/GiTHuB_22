@@ -4,7 +4,7 @@ class WageCalculation
                 public static final int FULL_TIME=1;
                 public static final int PART_TIME=0;
 
-        public static void calculateEmpWage(String EmployeeName,int wagePerHr,int NumberOfWorkingDays,int NumberWorkingHrs)
+        public static void calculateEmpWage(String CompanyName,int wagePerHr,int NumberOfWorkingDays,int NumberWorkingHrs)
         {
                         int currentWorkingHour=0;
                         int currentWorkingday=0;
@@ -29,7 +29,7 @@ class WageCalculation
                                         salary=workingHr*wagePerHr;
                                         totalSalary+=salary;
                         }
-                                        System.out.println("Total computed salary of "+EmployeeName+" is "+totalSalary);
+                                        System.out.println("Total computed salary of "+CompanyName+" is "+totalSalary);
         }
 }
 
@@ -37,14 +37,11 @@ public class EmployeeWage extends WageCalculation
 {
                                 public static void main(String[] args)
                                 {
-                                        for(int i=1;i<=3;i++)
-                                        {
-                                        System.out.println("\nEnter Employee Name : ");
+                                        System.out.println("\nEnter Company Name : ");
                                         Scanner sc=new Scanner(System.in);
-                                        String EmployeeName=sc.nextLine();
-                                        System.out.println("Enter Numberer of Working Days : ");
+                                        String CompanyName=sc.nextLine();
+                                        System.out.println("Enter Number of Working Days : ");
                                         int NumberOfWorkingDays=sc.nextInt();
-                                        calculateEmpWage(EmployeeName,NumberOfWorkingDays,20,30);
-                                        }
+                                        calculateEmpWage(CompanyName,NumberOfWorkingDays,20,30);
                                 }
 }
